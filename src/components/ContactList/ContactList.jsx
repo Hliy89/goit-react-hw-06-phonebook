@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import phonebooksActions from '../../redux/phonebook/phonebook-actions';
+import { deleteContact } from '../../redux/phonebook/phonebook-actions';
 import PropTypes from 'prop-types';
 
 import style from './ContactList.module.css';
@@ -36,7 +36,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onDelete: name => dispatch(phonebooksActions.deleteContact(name)),
+  onDelete: name => dispatch(deleteContact(name)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);

@@ -2,7 +2,7 @@ import { createAction } from '@reduxjs/toolkit';
 import shortid from 'shortid';
 
 
-const addContact = createAction('phonebooks/add', (name, number) => ({
+export const addContact = createAction('phonebooks/add', (name, number) => ({
     payload: {
         id: shortid.generate(),
         name,
@@ -10,12 +10,12 @@ const addContact = createAction('phonebooks/add', (name, number) => ({
     },
 }));
 
-const deleteContact = createAction('phonebooks/delete');
+export const deleteContact = createAction('phonebooks/delete');
 
-const changeFilter = createAction('phonebooks/changeFilter');
+export const changeFilter = createAction('phonebooks/changeFilter');
 
 
-export default { addContact, deleteContact, changeFilter };
+// export default { addContact, deleteContact, changeFilter };
 
 
 // const addContact = (name, number) => ({
